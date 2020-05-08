@@ -20,6 +20,7 @@ Some payment methods have specific requirements for setting the shipping details
 ### Properties
 
 * [amazon](shippinginitializeoptions.md#amazon)
+* [amazonpay](shippinginitializeoptions.md#amazonpay)
 * [methodId](shippinginitializeoptions.md#methodid)
 * [params](shippinginitializeoptions.md#params)
 * [timeout](shippinginitializeoptions.md#timeout)
@@ -35,6 +36,15 @@ Some payment methods have specific requirements for setting the shipping details
 **● amazon**: *[AmazonPayShippingInitializeOptions](amazonpayshippinginitializeoptions.md)*
 
 The options that are required to initialize the shipping step of checkout when using Amazon Pay.
+
+___
+<a id="amazonpay"></a>
+
+### `<Optional>` amazonpay
+
+**● amazonpay**: *[AmazonPayv2ShippingInitializeOptions](amazonpayv2shippinginitializeoptions.md)*
+
+The options that are required to initialize the edit button and shipping step when using Amazon Pay v2.
 
 ___
 <a id="methodid"></a>

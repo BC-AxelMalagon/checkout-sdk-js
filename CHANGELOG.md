@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.65.1-alpha.8ac7dd2df6b58e326803b3efdff0738bba8edee3](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.60.0...v1.65.1-alpha.8ac7dd2df6b58e326803b3efdff0738bba8edee3) (2020-05-08)
+
+
+### Bug Fixes
+
+* **checkout:** CHECKOUT-4774 Handle no hosted fields to be rendered scenario ([84acf19](https://github.com/bigcommerce/checkout-sdk-js/commit/84acf19))
+* **payment:** CHECKOUT-4842 Trigger event when "enter" key is pressed in one of hosted payment fields ([a9f9e86](https://github.com/bigcommerce/checkout-sdk-js/commit/a9f9e86))
+* **spam-protection:** CHECKOUT-4852 Make sure spam protection execution status is accurate ([be0221d](https://github.com/bigcommerce/checkout-sdk-js/commit/be0221d))
+* **spam-protection:** CHECKOUT-4852 Rethrow spam protection cancellation error ([0294b2b](https://github.com/bigcommerce/checkout-sdk-js/commit/0294b2b))
+
+
+### Code Refactoring
+
+* **payment:** INT-2464 rename the method id from amazonmaxo to amazonpay ([c2b58e3](https://github.com/bigcommerce/checkout-sdk-js/commit/c2b58e3))
+* **payment:** INT-2464 rename to amazon pay v2 ([366cba8](https://github.com/bigcommerce/checkout-sdk-js/commit/366cba8))
+
+
+### Features
+
+* **payment:** INT-2113 Checkout button and customer strategy ([f930b63](https://github.com/bigcommerce/checkout-sdk-js/commit/f930b63))
+* **payment:** INT-2119 adding payment and shipping strategies ([8ac7dd2](https://github.com/bigcommerce/checkout-sdk-js/commit/8ac7dd2))
+* **payment:** INT-2428 Modified filter to accept AccountInstruments ([7eab61b](https://github.com/bigcommerce/checkout-sdk-js/commit/7eab61b))
+* **payment:** INT-2464 fix linter issue ([96ee6c2](https://github.com/bigcommerce/checkout-sdk-js/commit/96ee6c2))
+* **payment:** PAYPAL-19 Paypal Commerce ([2ab3bed](https://github.com/bigcommerce/checkout-sdk-js/commit/2ab3bed))
+* **payment:** PAYPAL-293 Bump bigpay-client version to 5.6.0 ([b58a229](https://github.com/bigcommerce/checkout-sdk-js/commit/b58a229))
+* **payment:** PAYPAL-293 Implement paypalcommercecredit provider ([ceaaa69](https://github.com/bigcommerce/checkout-sdk-js/commit/ceaaa69))
+* **shopper:** CHECKOUT-4799 Add Sign-in Email support ([bbea61e](https://github.com/bigcommerce/checkout-sdk-js/commit/bbea61e))
+
 ## [1.65.0](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.64.0...v1.65.0) (2020-05-06)
 
 
