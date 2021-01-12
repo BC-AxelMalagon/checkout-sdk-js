@@ -66,6 +66,12 @@ export interface CheckoutButtonInitializeOptions extends CheckoutButtonOptions {
     googlepaycheckoutcom?: GooglePayButtonInitializeOptions;
 
     /**
+     * The options that are required to facilitate CybersourceV2 GooglePay. They can be
+     * omitted unles you need to support CybersourceV2 GooglePay.
+     */
+    googlepaycybersourcev2?: GooglePayButtonInitializeOptions;
+
+    /**
      * The options that are required to facilitate Stripe GooglePay. They can be
      * omitted unles you need to support Stripe GooglePay.
      */
