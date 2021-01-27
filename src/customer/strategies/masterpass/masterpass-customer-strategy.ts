@@ -49,7 +49,7 @@ export default class MasterpassCustomerStrategy implements CustomerStrategy {
                     callbackUrl: getCallbackUrl('checkout'),
                 };
 
-                return this._masterpassScriptLoader.load(this._paymentMethod.config.testMode)
+                return this._masterpassScriptLoader.load(this._paymentMethod.config.testMode, this._paymentMethod.initializationData.checkoutId)
                     .then(Masterpass => {
                         this._signInButton = this._createSignInButton(container);
 
@@ -94,6 +94,10 @@ export default class MasterpassCustomerStrategy implements CustomerStrategy {
     private _createSignInButton(containerId: string): HTMLElement {
         const container = document.querySelector(`#${containerId}`);
 
+        if (!this._paymentMethod || !this._paymentMethod.initializationData.checkoutId) {
+            throw new MissingDataError(MissingDataErrorType.MissingPaymentMethod);
+        }
+
         if (!container) {
             throw new InvalidArgumentError('Unable to create sign-in button without valid container ID.');
         }
@@ -101,7 +105,7 @@ export default class MasterpassCustomerStrategy implements CustomerStrategy {
         const button = document.createElement('input');
 
         button.type = 'image';
-        button.src = 'https://static.masterpass.com/dyn/img/btn/global/mp_chk_btn_160x037px.svg';
+        button.src = `https://${this._paymentMethod.config.testMode ? 'sandbox.' : ''}src.mastercard.com/assets/img/btn/src_chk_btn_126x030px.svg?locale=en_us&paymentmethod=master,visa,amex,discover&checkoutid=${this._paymentMethod.initializationData.checkoutId}`;
         container.appendChild(button);
 
         return button;

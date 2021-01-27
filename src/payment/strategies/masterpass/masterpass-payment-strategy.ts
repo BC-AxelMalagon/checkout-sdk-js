@@ -33,7 +33,7 @@ export default class MasterpassPaymentStrategy implements PaymentStrategy {
             throw new MissingDataError(MissingDataErrorType.MissingPaymentMethod);
         }
 
-        return this._masterpassScriptLoader.load(this._paymentMethod.config.testMode)
+        return this._masterpassScriptLoader.load(this._paymentMethod.config.testMode, this._paymentMethod.initializationData.checkoutId)
             .then(masterpass => {
                 this._masterpassClient = masterpass;
 
@@ -116,7 +116,6 @@ export default class MasterpassPaymentStrategy implements PaymentStrategy {
             amount: checkout.subtotal.toFixed(2),
             currency: storeConfig.currency.code,
             cartId: checkout.cart.id,
-            suppressShippingAddress: false,
             callbackUrl: getCallbackUrl('checkout'),
         };
     }
