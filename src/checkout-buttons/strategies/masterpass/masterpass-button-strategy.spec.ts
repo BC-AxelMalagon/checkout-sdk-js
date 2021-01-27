@@ -103,7 +103,7 @@ describe('MasterpassCustomerStrategy', () => {
 
             await strategy.initialize(masterpassOptions);
 
-            expect(masterpassScriptLoader.load).toHaveBeenLastCalledWith(true);
+            expect(masterpassScriptLoader.load).toHaveBeenLastCalledWith(true, 'checkoutId');
         });
 
         it('loads masterpass without test mode if disabled', async () => {
@@ -111,7 +111,7 @@ describe('MasterpassCustomerStrategy', () => {
 
             await strategy.initialize(masterpassOptions);
 
-            expect(masterpassScriptLoader.load).toHaveBeenLastCalledWith(false);
+            expect(masterpassScriptLoader.load).toHaveBeenLastCalledWith(false, 'checkoutId');
         });
 
         it('fails to initialize the strategy if no container is supplied', async () => {

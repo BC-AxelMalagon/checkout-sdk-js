@@ -33,7 +33,7 @@ export default class MasterpassButtonStrategy implements CheckoutButtonStrategy 
                     throw new MissingDataError(MissingDataErrorType.MissingPaymentMethod);
                 }
 
-                return this._masterpassScriptLoader.load(paymentMethod.config.testMode);
+                return this._masterpassScriptLoader.load(paymentMethod.config.testMode, paymentMethod.initializationData.checkoutId);
             })
             .then(masterpass => {
                 this._masterpassClient = masterpass;
@@ -53,15 +53,21 @@ export default class MasterpassButtonStrategy implements CheckoutButtonStrategy 
 
     private _createSignInButton(containerId: string): HTMLElement {
         const buttonContainer = document.getElementById(containerId);
+        const state = this._store.getState();
+        const paymentMethod = this._methodId ? state.paymentMethods.getPaymentMethod(this._methodId) : null;
 
         if (!buttonContainer) {
             throw new Error('Need a container to place the button');
         }
 
+        if (!paymentMethod) {
+            throw new MissingDataError(MissingDataErrorType.MissingPaymentMethod);
+        }
+
         const button = document.createElement('input');
 
         button.type = 'image';
-        button.src = 'https://static.masterpass.com/dyn/img/btn/global/mp_chk_btn_160x037px.svg';
+        button.src = `https://${paymentMethod.config.testMode ? 'sandbox.' : ''}src.mastercard.com/assets/img/btn/src_chk_btn_126x030px.svg?locale=en_us&paymentmethod=master,visa,amex,discover&checkoutid=${paymentMethod.initializationData.checkoutId}`;
         buttonContainer.appendChild(button);
 
         button.addEventListener('click', this._handleWalletButtonClick);
@@ -84,11 +90,10 @@ export default class MasterpassButtonStrategy implements CheckoutButtonStrategy 
 
         return {
             checkoutId: paymentMethod.initializationData.checkoutId,
-            allowedCardTypes: paymentMethod.initializationData.allowedCardTypes,
+            allowedCardTypes: ['master,amex,diners,discover,jcb,maestro,visa'], // paymentMethod.initializationData.allowedCardTypes,
             amount: checkout.cart.cartAmount.toString(),
             currency: checkout.cart.currency.code,
             cartId: checkout.cart.id,
-            suppressShippingAddress: false,
             callbackUrl: getCallbackUrl('cart'),
         };
     }
