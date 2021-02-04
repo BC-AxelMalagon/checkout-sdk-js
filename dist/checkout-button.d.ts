@@ -204,6 +204,11 @@ declare interface CheckoutButtonInitializeOptions extends CheckoutButtonOptions 
      */
     googlepaycheckoutcom?: GooglePayButtonInitializeOptions;
     /**
+     * The options that are required to facilitate CybersourceV2 GooglePay. They can be
+     * omitted unles you need to support CybersourceV2 GooglePay.
+     */
+    googlepaycybersourcev2?: GooglePayButtonInitializeOptions;
+    /**
      * The options that are required to facilitate Stripe GooglePay. They can be
      * omitted unles you need to support Stripe GooglePay.
      */
@@ -312,6 +317,7 @@ declare enum CheckoutButtonMethodType {
     GOOGLEPAY_AUTHORIZENET = "googlepayauthorizenet",
     GOOGLEPAY_BRAINTREE = "googlepaybraintree",
     GOOGLEPAY_CHECKOUTCOM = "googlepaycheckoutcom",
+    GOOGLEPAY_CYBERSOURCEV2 = "googlepaycybersourcev2",
     GOOGLEPAY_STRIPE = "googlepaystripe",
     MASTERPASS = "masterpass",
     PAYPALEXPRESS = "paypalexpress",

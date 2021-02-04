@@ -1208,6 +1208,11 @@ declare interface CheckoutButtonInitializeOptions extends CheckoutButtonOptions 
      */
     googlepaycheckoutcom?: GooglePayButtonInitializeOptions;
     /**
+     * The options that are required to facilitate CybersourceV2 GooglePay. They can be
+     * omitted unles you need to support CybersourceV2 GooglePay.
+     */
+    googlepaycybersourcev2?: GooglePayButtonInitializeOptions;
+    /**
      * The options that are required to facilitate Stripe GooglePay. They can be
      * omitted unles you need to support Stripe GooglePay.
      */
@@ -1316,6 +1321,7 @@ declare enum CheckoutButtonMethodType {
     GOOGLEPAY_AUTHORIZENET = "googlepayauthorizenet",
     GOOGLEPAY_BRAINTREE = "googlepaybraintree",
     GOOGLEPAY_CHECKOUTCOM = "googlepaycheckoutcom",
+    GOOGLEPAY_CYBERSOURCEV2 = "googlepaycybersourcev2",
     GOOGLEPAY_STRIPE = "googlepaystripe",
     MASTERPASS = "masterpass",
     PAYPALEXPRESS = "paypalexpress",
@@ -3405,6 +3411,11 @@ declare interface CustomerInitializeOptions extends CustomerRequestOptions {
      * The options that are required to initialize the GooglePay payment method.
      * They can be omitted unless you need to support GooglePay.
      */
+    googlepaycybersourcev2?: GooglePayCustomerInitializeOptions;
+    /**
+     * The options that are required to initialize the GooglePay payment method.
+     * They can be omitted unless you need to support GooglePay.
+     */
     googlepaystripe?: GooglePayCustomerInitializeOptions;
 }
 
@@ -4469,6 +4480,11 @@ declare interface PaymentInitializeOptions extends PaymentRequestOptions {
      * They can be omitted unless you need to support GooglePay.
      */
     googlepaycheckoutcom?: GooglePayPaymentInitializeOptions;
+    /**
+     * The options that are required to initialize the GooglePay CybersourceV2 payment method.
+     * They can be omitted unless you need to support GooglePay.
+     */
+    googlepaycybersourcev2?: GooglePayPaymentInitializeOptions;
     /**
      * The options that are required to initialize the GooglePay Stripe payment method.
      * They can be omitted unless you need to support GooglePay.

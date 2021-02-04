@@ -23,6 +23,7 @@
 * [googlepayauthorizenet](checkoutbuttoninitializeoptions.md#optional-googlepayauthorizenet)
 * [googlepaybraintree](checkoutbuttoninitializeoptions.md#optional-googlepaybraintree)
 * [googlepaycheckoutcom](checkoutbuttoninitializeoptions.md#optional-googlepaycheckoutcom)
+* [googlepaycybersourcev2](checkoutbuttoninitializeoptions.md#optional-googlepaycybersourcev2)
 * [googlepaystripe](checkoutbuttoninitializeoptions.md#optional-googlepaystripe)
 * [methodId](checkoutbuttoninitializeoptions.md#methodid)
 * [params](checkoutbuttoninitializeoptions.md#optional-params)
@@ -91,6 +92,15 @@ ___
 
 The options that are required to facilitate Checkout.com GooglePay. They can be
 omitted unles you need to support Checkout.com GooglePay.
+
+___
+
+### `Optional` googlepaycybersourcev2
+
+• **googlepaycybersourcev2**? : *[GooglePayButtonInitializeOptions](googlepaybuttoninitializeoptions.md)*
+
+The options that are required to facilitate CybersourceV2 GooglePay. They can be
+omitted unles you need to support CybersourceV2 GooglePay.
 
 ___
 
