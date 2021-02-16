@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.130.1-alpha.bb422a4f51009da8f7b79cef19e3ac3e5b8107e9](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.127.0...v1.130.1-alpha.bb422a4f51009da8f7b79cef19e3ac3e5b8107e9) (2021-02-16)
+
+
+### Features
+
+* **payment:** INT-3408 migrate masterpass to SRC ([bb422a4](https://github.com/bigcommerce/checkout-sdk-js/commit/bb422a4f51009da8f7b79cef19e3ac3e5b8107e9))
+* **payment:** INT-3418 Added googlepay on cybersourcev2 ([8964140](https://github.com/bigcommerce/checkout-sdk-js/commit/8964140870d19babdd286870337995d356b14db0))
+* **payment:** INT-3659 Add payment method flow to Stripe v3 ([7b4b388](https://github.com/bigcommerce/checkout-sdk-js/commit/7b4b38892bfccf59fb54a7151530c1a447fa532a))
+* **payment:** PAYPAL-876 stop polling mechanism when error occurs ([79119b2](https://github.com/bigcommerce/checkout-sdk-js/commit/79119b23c791d1f6dda5046691576f032148ea0a))
+
+
+### Bug Fixes
+
+* **payment:** CHECKOUT-5324 Upgrade BigPay client version ([3aa965b](https://github.com/bigcommerce/checkout-sdk-js/commit/3aa965b4258be2a7995d6a2655939ce98d8549f7))
+* **payment:** INT-3611 Refresh the state in Braintree ([351bfe3](https://github.com/bigcommerce/checkout-sdk-js/commit/351bfe3fa11d7c945ab5593a27f4d33c0d2727d9))
+
 ## [1.130.0](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.129.1...v1.130.0) (2021-02-15)
 
 
