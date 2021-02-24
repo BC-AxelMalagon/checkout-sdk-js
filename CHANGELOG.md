@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.131.1-alpha.7f3028278516b5433767d0e89b8313f54c0053f8](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.127.0...v1.131.1-alpha.7f3028278516b5433767d0e89b8313f54c0053f8) (2021-02-24)
+
+
+### Features
+
+* **payment:** INT-3408 migrate masterpass to SRC ([7f30282](https://github.com/bigcommerce/checkout-sdk-js/commit/7f3028278516b5433767d0e89b8313f54c0053f8))
+* **payment:** INT-3418 Added googlepay on cybersourcev2 ([8964140](https://github.com/bigcommerce/checkout-sdk-js/commit/8964140870d19babdd286870337995d356b14db0))
+* **payment:** INT-3659 Add payment method flow to Stripe v3 ([7b4b388](https://github.com/bigcommerce/checkout-sdk-js/commit/7b4b38892bfccf59fb54a7151530c1a447fa532a))
+* **payment:** PAYPAL-876 added preloader for APM when polling mechanism is running ([2d613b8](https://github.com/bigcommerce/checkout-sdk-js/commit/2d613b86e7b195c95ef7e1c0a607a58d11269eb9))
+* **payment:** PAYPAL-876 stop polling mechanism when error occurs ([79119b2](https://github.com/bigcommerce/checkout-sdk-js/commit/79119b23c791d1f6dda5046691576f032148ea0a))
+
+
+### Bug Fixes
+
+* **checkout:** INT-3665 3D Secure is declining the transaction in Braintree without any reason in some stores ([4d5528e](https://github.com/bigcommerce/checkout-sdk-js/commit/4d5528e0b7fdd3a141898b02d2ae2345af3ac624))
+* **common:** CHECKOUT-5612 Add isAccountCreationEnabled prop to StoreConfig ([74cc00e](https://github.com/bigcommerce/checkout-sdk-js/commit/74cc00e301185aed9acf7b0f42141f0dea035a20))
+* **payment:** CHECKOUT-5324 Upgrade BigPay client version ([3aa965b](https://github.com/bigcommerce/checkout-sdk-js/commit/3aa965b4258be2a7995d6a2655939ce98d8549f7))
+* **payment:** INT-3611 Refresh the state in Braintree ([351bfe3](https://github.com/bigcommerce/checkout-sdk-js/commit/351bfe3fa11d7c945ab5593a27f4d33c0d2727d9))
+
 ## [1.131.0](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.130.1...v1.131.0) (2021-02-22)
 
 
